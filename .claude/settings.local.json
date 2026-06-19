@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(node *)",
+      "Bash(npm ls *)",
+      "Bash(npm install *)",
+      "Bash(/Applications/wechatwebdevtools.app/Contents/MacOS/cli *)",
+      "Read(//Users/xiaoxiao/Library/Application Support/**)",
+      "Read(//Users/xiaoxiao/Library/Application Support/微信开发者工具/50a7d9210159a32f006158795f893857/Default/WeappLocalData/**)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git remote *)",
+      "Bash(git branch *)"
+    ]
+  }
+}

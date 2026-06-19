@@ -1,0 +1,398 @@
+.index-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0f0f1a 0%, #1a1a2e 60%, #16213e 100%);
+  padding: 30px 20px 0;
+  box-sizing: border-box;
+}
+
+// ===== Header =====
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+
+  &-title {
+    display: block;
+    font-size: 42px;
+    font-weight: 800;
+    color: #ffd700;
+    letter-spacing: 4px;
+    margin-bottom: 6px;
+  }
+
+  &-subtitle {
+    display: block;
+    font-size: 26px;
+    font-weight: 600;
+    color: #e0e0e0;
+  }
+}
+
+// ===== Submitted Banner =====
+.submitted-banner {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(255, 215, 0, 0.15));
+  border: 1px solid rgba(76, 175, 80, 0.4);
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.banner-text {
+  font-size: 28px;
+  font-weight: 700;
+  color: #4caf50;
+}
+
+// ===== Stats Row =====
+.stats-row {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.stat-box {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  font-size: 20px;
+  color: #8888aa;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 36px;
+  font-weight: 800;
+  color: #ffd700;
+
+  &.done {
+    color: #4caf50;
+  }
+}
+
+.stat-hint {
+  display: block;
+  font-size: 18px;
+  color: #666688;
+  margin-top: 2px;
+
+  &.warn {
+    color: #ff9800;
+  }
+}
+
+// ===== Rule Hint =====
+.rule-hint {
+  background: rgba(255, 215, 0, 0.06);
+  border-left: 4px solid #ffd700;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+}
+
+.rule-text {
+  font-size: 22px;
+  color: #ccccdd;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: #ffd700;
+  font-weight: 700;
+}
+
+// ===== Group List =====
+.group-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+// ===== Group Card =====
+.group-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+
+  &.done {
+    border-color: rgba(76, 175, 80, 0.3);
+  }
+}
+
+.group-title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 18px 0;
+}
+
+.group-label {
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.group-status {
+  font-size: 20px;
+  padding: 4px 14px;
+  border-radius: 16px;
+  font-weight: 600;
+
+  &.ok {
+    background: rgba(76, 175, 80, 0.15);
+    color: #4caf50;
+  }
+
+  &.todo {
+    background: rgba(158, 158, 158, 0.1);
+    color: #777777;
+  }
+}
+
+// ===== Result Strip =====
+.result-strip {
+  display: flex;
+  padding: 12px 18px;
+  gap: 10px;
+}
+
+.result-slot {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  min-width: 0;
+}
+
+.result-place {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.result-flag {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.result-name {
+  font-size: 20px;
+  color: #e0e0e0;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.result-empty {
+  font-size: 18px;
+  color: #555566;
+}
+
+// ===== Team Select Area =====
+.team-select-area {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 12px 18px 16px;
+}
+
+.team-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.team-identity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  width: 160px;
+}
+
+.team-flag {
+  font-size: 30px;
+}
+
+.team-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+// ===== Medal Buttons =====
+.medal-btns {
+  display: flex;
+  gap: 8px;
+}
+
+.medal-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  width: 62px;
+  padding: 10px 4px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.15s ease;
+
+  &.dimmed {
+    opacity: 0.25;
+  }
+
+  &.active {
+    opacity: 1;
+    &.first {
+      border-color: #ffd700;
+      background: rgba(255, 215, 0, 0.15);
+    }
+    &.second {
+      border-color: #c0c0c0;
+      background: rgba(192, 192, 192, 0.15);
+    }
+    &.third {
+      border-color: #cd7f32;
+      background: rgba(205, 127, 50, 0.15);
+    }
+  }
+}
+
+.medal-icon {
+  font-size: 22px;
+}
+
+.medal-text {
+  font-size: 16px;
+  color: #8888aa;
+
+  .active & {
+    &.first-text {
+      color: #ffd700;
+    }
+  }
+
+  .active.first & {
+    color: #ffd700;
+  }
+  .active.second & {
+    color: #c0c0c0;
+  }
+  .active.third & {
+    color: #cd7f32;
+  }
+}
+
+// ===== Knockout Entry =====
+.knockout-entry {
+  text-align: center;
+  padding: 0 0 18px;
+}
+
+.ko-nav-btn {
+  display: inline-block;
+  padding: 18px 44px;
+  border-radius: 28px;
+  background: rgba(255, 215, 0, 0.08);
+  border: 2px solid rgba(255, 215, 0, 0.3);
+
+  &.disabled {
+    opacity: 0.35;
+  }
+}
+
+.ko-nav-text {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffd700;
+}
+
+// ===== Submit =====
+.submit-section {
+  text-align: center;
+  padding: 10px 0 14px;
+}
+
+.submit-btn {
+  display: inline-block;
+  padding: 22px 60px;
+  border-radius: 36px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+
+  &.ready {
+    background: linear-gradient(135deg, #ffd700, #ff8c00);
+    border-color: #ffd700;
+    box-shadow: 0 6px 24px rgba(255, 215, 0, 0.35);
+  }
+}
+
+.submit-text {
+  font-size: 32px;
+  font-weight: 700;
+  color: #777777;
+
+  .ready & {
+    color: #ffffff;
+  }
+}
+
+.submit-condition {
+  display: block;
+  font-size: 22px;
+  color: #8888aa;
+  margin-top: 12px;
+}
+
+// ===== Footer =====
+.footer-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0 20px;
+}
+
+.btn-clear {
+  background: rgba(244, 67, 54, 0.1);
+  border: 1px solid rgba(244, 67, 54, 0.25);
+  border-radius: 24px;
+  padding: 14px 32px;
+}
+
+.btn-reset {
+  background: rgba(255, 152, 0, 0.1);
+  border: 1px solid rgba(255, 152, 0, 0.25);
+  border-radius: 24px;
+  padding: 14px 32px;
+}
+
+.btn-text {
+  font-size: 24px;
+  color: #f44336;
+
+  .btn-reset & {
+    color: #ff9800;
+  }
+}
+
+.bottom-spacer {
+  height: 60px;
+}
