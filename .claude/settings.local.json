@@ -12,7 +12,14 @@
       "Bash(git add *)",
       "Bash(git commit *)",
       "Bash(git remote *)",
-      "Bash(git branch *)"
+      "Bash(git branch *)",
+      "Bash(git push *)",
+      "Bash(ssh -T git@github.com)",
+      "Bash(gh auth *)",
+      "Read(//Users/xiaoxiao/.ssh/**)",
+      "Bash(ssh-keygen *)",
+      "Bash(git config *)",
+      "Bash(git status *)"
     ]
   }
 }
