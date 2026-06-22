@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import Taro, { useDidShow } from '@tarojs/taro';
+import Taro, { useDidShow, useShareAppMessage, useShareTimeline } from '@tarojs/taro';
 import { View, Text } from '@tarojs/components';
 import { GROUPS, Group, Team } from '../../data/groups';
 import {
@@ -22,6 +22,16 @@ export default function IndexPage() {
   useDidShow(() => {
     setPredictions(getPredictions());
   });
+
+  // ====== 分享 ======
+  useShareAppMessage(() => ({
+    title: '世界杯2026 赛事预测 - 小组赛排名竞猜',
+    path: '/pages/index/index',
+  }));
+
+  useShareTimeline(() => ({
+    title: '🏆 世界杯2026 赛事预测，一起来猜！',
+  }));
 
   // ====== 统计数据 ======
   const firstSecondDone = useMemo(() => countFirstSecondDone(predictions), [predictions]);

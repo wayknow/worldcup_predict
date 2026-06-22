@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import Taro, { useDidShow } from '@tarojs/taro';
+import Taro, { useDidShow, useShareAppMessage, useShareTimeline } from '@tarojs/taro';
 import { View, Text } from '@tarojs/components';
 import { GROUPS } from '../../data/groups';
 import { ALL_KNOCKOUT_MATCHES, KnockoutMatch, ROUND_LABELS, BracketSlot } from '../../data/knockout';
@@ -40,6 +40,16 @@ export default function KnockoutPage() {
     setThirdSlots(getThirdSlotAssignments());
     setThirdRanking(getThirdTeamRanking());
   });
+
+  // ====== 分享 ======
+  useShareAppMessage(() => ({
+    title: '世界杯2026 淘汰赛预测 - 32强→决赛',
+    path: '/pages/index/index',
+  }));
+
+  useShareTimeline(() => ({
+    title: '⚽ 来看看我的世界杯淘汰赛预测！',
+  }));
 
   const groupDone = countFirstSecondDone(groupPredictions) === TOTAL_GROUPS
     && countThirdSelected(groupPredictions) === BEST_THIRD_COUNT;
